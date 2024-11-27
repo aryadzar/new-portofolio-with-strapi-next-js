@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <div className="flex items-center justify-center bg-[#11071F] min-h-screen text-white">
+    <div className="flex items-center container mx-auto justify-center bg-[#11071F] min-h-screen text-white">
       {/* Kontainer Grid */}
       <div className="container mx-auto grid grid-cols-1 items-center gap-8 px-6 md:grid-cols-2 md:px-12">
         {/* Bagian Gambar */}
@@ -21,7 +21,7 @@ const Hero = () => {
         {/* Bagian Tulisan */}
         <div className="relative justify-center space-y-6 text-center md:text-left">
           {/* Glow Background */}
-          <div className="z-1 absolute left-[50%] top-[50%] h-[200px] w-[500px] translate-x-[-50%] translate-y-[-50%] rounded-[100%] bg-[#6517be] blur-[90px]"></div>
+          <div className=" -z-40 fixed left-[50%] top-[50%] h-[200px] w-[800px] translate-x-[-50%] translate-y-[-50%] rounded-[100%] bg-[#6517be] blur-[90px]"></div>
 
           <h1 className="relative text-3xl font-bold text-purple-300 md:text-5xl">
             Im BackEnd Developer

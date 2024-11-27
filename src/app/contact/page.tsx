@@ -1,11 +1,12 @@
-import React from 'react'
+import ContactMe from '@/components/ContactMe';
+import React from 'react';
 
 const Contact = () => {
   return (
     <div className=' text-white'>
-        Contact
+      <ContactMe/>
     </div>
   )
-}
+};
 
-export default Contact
+export default Contact;

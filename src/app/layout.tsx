@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
@@ -17,8 +17,6 @@ const geistMono = localFont({
   weight: '100 900',
 });
 
-
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -26,13 +24,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <title>Portofolio Arya Dzaky</title>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar/>
+        <Navbar />
+        
         {children}
         <Footer />
-
       </body>
     </html>
   );

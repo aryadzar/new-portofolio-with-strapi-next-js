@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); // State untuk kontrol menu
-  const param = usePathname()
+  const param = usePathname();
   const router = [
     {
       path: '/',
@@ -32,9 +32,9 @@ const Navbar = () => {
       name: 'Contact Me',
     },
   ];
-  
+
   return (
-    <header className="sticky top-0 bg-transparent  z-50 flex items-center justify-between bg-[#1A0B2E] px-6 py-4 text-white lg:px-20">
+    <header className="sticky backdrop-blur-md top-0 bg-transparent  z-50 flex items-center justify-between bg-[#1A0B2E] px-6 py-4 text-white lg:px-20">
       {/* Logo */}
       <Image src="/logo.svg" width={90} height={90} alt="Logo" />
 
@@ -67,11 +67,11 @@ const Navbar = () => {
       <nav
         className={`${
           isOpen
-            ? 'z-50 block animate-flip-down bg-transparent px-10 backdrop-blur-md animate-duration-[560ms] animate-once animate-ease-out'
+            ? 'z-50 block animate-flip-down  px-10 backdrop-blur-md animate-duration-[560ms] animate-once animate-ease-out'
             : 'hidden'
         } absolute left-0 top-16 w-full bg-[#1A0B2E] lg:static lg:flex lg:w-auto lg:items-center lg:space-x-6 lg:bg-transparent`}
       >
-        <ul className="flex flex-col items-center space-y-4 lg:flex-row lg:space-x-6 lg:space-y-0 lg:px-0">
+        <ul className="flex flex-col items-center backdrop-blur-md space-y-4 lg:flex-row lg:space-x-6 lg:space-y-0 lg:px-0">
           {router.map((item, i) => (
             <li key={i} className="relative group">
               <Link
