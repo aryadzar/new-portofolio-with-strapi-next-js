@@ -1,12 +1,23 @@
-import React from 'react';
+import { FC } from 'react';
 
-const DetailBlog = ({ params }: { params: { slug: string } }) => {
-  return (
-    <div className=" text-white">
-      {params.slug}
-      bla
-    </div>
-  );
+interface DetailBlogProps {
+  params: { slug: string };
+}
+
+const DetailBlog= async ({
+   params,
+ }: {
+   params: Promise<{ slug: string }>
+ }) => {
+
+   const slug = (await params).slug
+   return (
+
+      <div className="text-white">
+         {slug}
+         bla
+      </div>
+   );
 };
 
 export default DetailBlog;
