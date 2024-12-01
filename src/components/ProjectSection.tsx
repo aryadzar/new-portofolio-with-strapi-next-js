@@ -1,16 +1,15 @@
+import { Portofolio } from "@/model/portofolio";
+import { media } from "@/utils/media";
+import Image from "next/image";
+import Link from "next/link";
+
 interface ProjectCardProps {
-    title: string;
-    description: string;
-    image: string;
-    link: string;
+    portofolio : Portofolio
     reverse?: boolean;
   }
   
   const ProjectCard: React.FC<ProjectCardProps> = ({
-    title,
-    description,
-    image,
-    link,
+    portofolio,
     reverse = false,
   }) => {
     return (
@@ -21,22 +20,24 @@ interface ProjectCardProps {
       >
         {/* Gambar Proyek */}
         <div className="flex-1 relative">
-            <div className=" -z-40 absolute left-[20%] top-[50%] h-[200px] w-[200px] translate-x-[-50%] translate-y-[-50%] rounded-[100%] bg-[#6517be] blur-[90px]"></div>
+            <div className=" -z-40 absolute left-[10%] top-[50%] h-[200px] w-[500px] translate-x-[-50%] translate-y-[-50%] rounded-[100%] bg-[#6517be] blur-[90px]"></div>
 
-          <img
-            src={image}
-            alt={title}
-            className="rounded-lg shadow-lg object-cover h-48 w-48"
+          <Image
+            src={media(portofolio.Gambar.url ?? " ")}
+            alt={portofolio.Judul}
+            width={800}
+            height={500}
+            className="rounded-lg shadow-lg object-cover"
           />
         </div>
   
         {/* Deskripsi dengan Efek Blur */}
         <div className="flex-1 relative">
           <div className="bg-white/10 backdrop-blur-md p-6 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-bold mb-4">{title}</h3>
-            <p className="text-gray-200 mb-6">{description}</p>
+            <h3 className="text-2xl font-bold mb-4">{portofolio.Judul}</h3>
+            <p className="text-gray-200 mb-6">{portofolio.Deskripsi}</p>
             <a
-              href={link}
+              href={portofolio.Link_Project}
               className="text-purple-400 hover:underline font-medium"
               target="_blank"
               rel="noopener noreferrer"

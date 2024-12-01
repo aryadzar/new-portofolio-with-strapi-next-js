@@ -1,5 +1,9 @@
-const AboutCom = () => {
-   const data = [
+import { getAbout } from "@/services/about.service";
+
+const AboutCom = async() => {
+   const {data}  = await  getAbout()
+
+   const data_coba    = [
       {
          category: 'Work Experience',
          items: [
@@ -57,22 +61,12 @@ const AboutCom = () => {
    return (
       <div className="container px-10 lg:mx-auto my-20">
          <p className=" text-justify">
-            As a Backend and Fullstack Developer, I specialize in designing and
-            implementing scalable web applications that can handle growing user
-            demands and complex functionalities. My expertise lies in building
-            robust backend systems that ensure high performance, security, and
-            reliability. I work with modern frameworks and technologies such as
-            Laravel, Node.js, or Django to create efficient APIs and manage
-            databases effectively. These systems are optimized for speed and
-            scalability, ensuring they remain stable even under heavy traffic or
-            data loads. Additionally, I focus on implementing clean,
-            maintainable code that follows best practices, facilitating easier
-            updates and long-term growth.
+            {data.data.isi_tentang_saya}
          </p>
          <div className="flex flex-col mx-auto md:flex-row justify-center max-w-6xl  gap-10 mt-10">
             <div className=" -z-40 fixed left-[50%] top-[50%] h-[200px] w-[800px] translate-x-[-50%] translate-y-[-50%] rounded-[100%] bg-[#6517be] blur-[90px]"></div>
 
-            {data.map((section, idx) => (
+            {data_coba  .map((section, idx) => (
                <div key={idx} className="text-white w-full md:w-1/2">
                   <h2 className="text-2xl font-semibold mb-4 text-center md:text-left">
                      {section.category}

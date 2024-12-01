@@ -7,6 +7,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import StarBackground from '@/components/StarsBackground';
 import { AppProgressBar as ProgressBar } from 'next-nprogress-bar';
+import { SparklesCore } from '@/components/ui/sparkles';
 
 const geistSans = localFont({
    src: './fonts/GeistVF.woff',
@@ -30,7 +31,17 @@ export default function RootLayout({
          <body
             className={`${geistSans.variable} ${geistMono.variable} antialiased`}
          >
-            <StarBackground />
+            <div className="w-full fixed inset-0 h-screen">
+            <SparklesCore
+               id="tsparticlesfullpage"
+               background="transparent"
+               minSize={0.6}
+               maxSize={1.4}
+               particleDensity={100}
+               className="w-full h-full"
+               particleColor="#FFFFFF"
+            />
+            </div>
             <Navbar />
 
             {children}
