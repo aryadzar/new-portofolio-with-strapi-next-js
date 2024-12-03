@@ -6,9 +6,9 @@ const nextConfig: NextConfig = {
          {
             protocol: 'https',
             hostname: 'strapi-api.aryadzar.my.id',
-         }
-      ]
-   }
+         },
+      ],
+   },
 };
 
 export default nextConfig;

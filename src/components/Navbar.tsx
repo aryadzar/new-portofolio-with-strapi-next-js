@@ -15,10 +15,10 @@ const Navbar = () => {
          path: '/about',
          name: 'About',
       },
-      {
-         path: '/services',
-         name: 'Services',
-      },
+      // {
+      //    path: '/services',
+      //    name: 'Services',
+      // },
       {
          path: '/portofolio',
          name: 'Portofolio',
@@ -36,7 +36,13 @@ const Navbar = () => {
    return (
       <header className="sticky backdrop-blur-md top-0 bg-transparent  z-50 flex items-center justify-between bg-[#1A0B2E] px-6 py-4 text-white lg:px-20">
          {/* Logo */}
-         <Image src="/logo.svg" width={90} height={90} alt="Logo" className='animate-fade-down animate-ease-in-out' />
+         <Image
+            src="/logo.svg"
+            width={90}
+            height={90}
+            alt="Logo"
+            className="animate-fade-down animate-ease-in-out"
+         />
 
          {/* Hamburger Button */}
          <button

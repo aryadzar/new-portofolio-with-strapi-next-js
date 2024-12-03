@@ -31,18 +31,18 @@ export default function RootLayout({
          <body
             className={`${geistSans.variable} ${geistMono.variable} antialiased`}
          >
-            <div className="w-full fixed inset-0 h-screen">
-            <SparklesCore
-               id="tsparticlesfullpage"
-               background="transparent"
-               minSize={0.6}
-               maxSize={1.4}
-               particleDensity={100}
-               className="w-full h-full"
-               particleColor="#FFFFFF"
-            />
-            </div>
             <Navbar />
+            <div className="w-full fixed -z-40   h-screen">
+               <SparklesCore
+                  id="tsparticlesfullpage"
+                  background="transparent"
+                  minSize={0.6}
+                  maxSize={1.4}
+                  particleDensity={100}
+                  className="w-full h-full"
+                  particleColor="#FFFFFF"
+               />
+            </div>
 
             {children}
             <ProgressBar

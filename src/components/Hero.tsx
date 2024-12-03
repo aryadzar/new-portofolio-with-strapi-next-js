@@ -5,10 +5,14 @@ import { media } from '@/utils/media';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FlipWords } from './ui/flip-words';
+import { useEffect } from 'react';
 
 const Hero = async () => {
    const {data}  = await  getAbout()
    const flip = ['Fullstack', 'Backend'];
+
+
+
    return (
       <div className="flex items-center container mx-auto justify-center min-h-screen  text-white">
          {/* Kontainer Grid */}
@@ -32,10 +36,10 @@ const Hero = async () => {
                <div className=" -z-40 fixed left-[50%] top-[50%] h-[200px] w-[800px] translate-x-[-50%] translate-y-[-50%] rounded-[100%] bg-[#6517be] blur-[90px]"></div>
 
                <h1 className="relative text-3xl font-bold text-purple-300 md:text-5xl">
-                  <FlipWords words={flip}/> Developer
+                  <FlipWords words={flip} className=' text-purple-300' duration={1000}/> Developer
                </h1>
                <p className="relative leading-relaxed text-gray-300">
-                  im Muhammad Arya Dzaky Arenanto
+                  Im Muhammad Arya Dzaky Arenanto
                </p>
                <p className="relative leading-relaxed text-gray-300">
                   {data.data.tentang_saya_singkat}

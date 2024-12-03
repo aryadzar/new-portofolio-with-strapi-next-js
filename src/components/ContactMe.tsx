@@ -49,7 +49,7 @@ const ContactMe = () => {
                ></textarea>
                <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-[#6429B6] to-[#2C1250] text-white font-semibold py-3 rounded-md hover:opacity-90 transition-opacity duration-200"
+                  className="w-full bg-gradient-to-r from-[#6429B6] to-[#2C1250] text-white font-semibold py-3 rounded-md hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-opacity duration-200"
                >
                   Send Message
                </button>

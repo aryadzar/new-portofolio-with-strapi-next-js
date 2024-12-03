@@ -6,7 +6,7 @@ export interface Data {
    id: number;
    documentId: string;
    isi_tentang_saya: string;
-   tentang_saya_singkat : string;
+   tentang_saya_singkat: string;
    createdAt: string;
    updatedAt: string;
    publishedAt: string;
@@ -88,5 +88,3 @@ export interface Cv {
    updatedAt: string;
    publishedAt: string;
 }
-
-

@@ -1,9 +1,9 @@
-import { getAbout } from "@/services/about.service";
+import { getAbout } from '@/services/about.service';
 
-const AboutCom = async() => {
-   const {data}  = await  getAbout()
+const AboutCom = async () => {
+   const { data } = await getAbout();
 
-   const data_coba    = [
+   const data_coba = [
       {
          category: 'Work Experience',
          items: [
@@ -60,13 +60,11 @@ const AboutCom = async() => {
 
    return (
       <div className="container px-10 lg:mx-auto my-20">
-         <p className=" text-justify">
-            {data.data.isi_tentang_saya}
-         </p>
+         <p className=" text-justify">{data.data.isi_tentang_saya}</p>
          <div className="flex flex-col mx-auto md:flex-row justify-center max-w-6xl  gap-10 mt-10">
             <div className=" -z-40 fixed left-[50%] top-[50%] h-[200px] w-[800px] translate-x-[-50%] translate-y-[-50%] rounded-[100%] bg-[#6517be] blur-[90px]"></div>
 
-            {data_coba  .map((section, idx) => (
+            {data_coba.map((section, idx) => (
                <div key={idx} className="text-white w-full md:w-1/2">
                   <h2 className="text-2xl font-semibold mb-4 text-center md:text-left">
                      {section.category}
