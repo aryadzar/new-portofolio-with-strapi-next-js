@@ -2,7 +2,7 @@ import type { Config } from 'tailwindcss';
 import tailwindcssAnimate from 'tailwindcss-animated';
 const {
    default: flattenColorPalette,
- } = require("tailwindcss/lib/util/flattenColorPalette");
+} = require('tailwindcss/lib/util/flattenColorPalette');
 
 export default {
    content: [
@@ -22,12 +22,12 @@ export default {
 } satisfies Config;
 
 function addVariablesForColors({ addBase, theme }: any) {
-   let allColors = flattenColorPalette(theme("colors"));
+   let allColors = flattenColorPalette(theme('colors'));
    let newVars = Object.fromEntries(
-     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+      Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
    );
-  
+
    addBase({
-     ":root": newVars,
+      ':root': newVars,
    });
- }
+}

@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { getAbout } from '@/services/about.service';
 import { media } from '@/utils/media';
@@ -8,10 +8,8 @@ import { FlipWords } from './ui/flip-words';
 import { useEffect } from 'react';
 
 const Hero = async () => {
-   const {data}  = await  getAbout()
+   const { data } = await getAbout();
    const flip = ['Fullstack', 'Backend'];
-
-
 
    return (
       <div className="flex items-center container mx-auto justify-center min-h-screen  text-white">
@@ -36,7 +34,12 @@ const Hero = async () => {
                <div className=" -z-40 fixed left-[50%] top-[50%] h-[200px] w-[800px] translate-x-[-50%] translate-y-[-50%] rounded-[100%] bg-[#6517be] blur-[90px]"></div>
 
                <h1 className="relative text-3xl font-bold text-purple-300 md:text-5xl">
-                  <FlipWords words={flip} className=' text-purple-300' duration={1000}/> Developer
+                  <FlipWords
+                     words={flip}
+                     className=" text-purple-300"
+                     duration={1000}
+                  />{' '}
+                  Developer
                </h1>
                <p className="relative leading-relaxed text-gray-300">
                   Im Muhammad Arya Dzaky Arenanto
@@ -46,7 +49,7 @@ const Hero = async () => {
                </p>
                <Link
                   href={media(data.data.cv.url)}
-                  target='_blank'
+                  target="_blank"
                   className="relative inline-block items-center rounded-lg bg-gradient-to-tr from-[#2C1250] to-[#6429B6] px-6 py-3 text-white shadow-md"
                >
                   Download CV

@@ -10,8 +10,6 @@ import { getAbout } from '@/services/about.service';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
-
-
    return (
       <>
          <Hero />
