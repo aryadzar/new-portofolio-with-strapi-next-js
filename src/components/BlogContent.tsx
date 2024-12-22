@@ -21,27 +21,35 @@ const BlogContent: React.FC<BlogContentProps> = ({
          <ReactMarkdown 
             remarkPlugins={[remarkYoutube, remarkGfm]}
             
-            components={{ 
-               a: ({href, children}) => (
-                  <a href={href || " "} className=" text-blue-600">
+            components={{
+               a: ({ href, children }) => (
+                  <a href={href || " "} className="text-blue-600 hover:underline">
                      {children}
                   </a>
                ),
                img: ({ src, alt }) => (
                   <img
-                    src={src || ""}
-                    alt={alt || ""}
-                    className="block mx-auto  my-6"
+                     src={src || ""}
+                     alt={alt || ""}
+                     className="block mx-auto mt-5 my-6 max-w-full rounded-lg shadow-md"
+                     style={{ height: 'auto' }}
                   />
-                ),
-                iframe: ({ ...props }) => (
-                    <iframe
-                      {...props}
-                      className="w-full aspect-video"
-                      allowFullScreen
+               ),
+               iframe: ({ ...props }) => (
+                  <iframe
+                     {...props}
+                     className="w-full aspect-video mt-5 rounded-md"
+                     allowFullScreen
                   ></iframe>
-                ),
-               
+               ),
+               blockquote: ({ children }) => (
+                  <blockquote className="border-l-4 border-purple-800 pl-4 italic text-gray-300 my-6">
+                     {children}
+                  </blockquote>
+               ),
+               p: ({ children }) => (
+                  <p className="mb-6 text-gray-200">{children}</p>
+               ),
             }}
          
          

@@ -243,7 +243,7 @@ const BlogPage: React.FC = () => {
                value={search}
                onChange={(e) => setSearch(e.target.value)}
             />
-            <select
+            {/* <select
                className="w-full p-3 rounded-md  backdrop-blur-md bg-white/10 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
                value={category}
                onChange={(e) => setCategory(e.target.value)}
@@ -269,14 +269,14 @@ const BlogPage: React.FC = () => {
                <option className="bg-black text-white" value="Oldest">
                   Sort By: Oldest
                </option>
-            </select>
+            </select> */}
          </div>
 
          {/* Blog Grid */}
          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {paginatedBlogs.map((blog) => (
                <Link key={blog.id} href={`/blog/${blog.slug}`}>
-                  <div className="bg-purple-700 rounded shadow-lg overflow-hidden flex flex-col">
+                  <div className="bg-gradient-to-r from-[#2B0B3A] via-[#200635] via-50% to-[#261045] rounded shadow-lg overflow-hidden hover-3d transition-transform duration-300 flex flex-col">
                      <img
                         src={media(blog.thumbnail.url)}
                         alt={blog.title}

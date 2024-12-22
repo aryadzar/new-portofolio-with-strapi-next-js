@@ -23,7 +23,7 @@ export const getPost = async (slug: string) => {
         },
         transformResponse: (res) => {
             const resData = JSON.parse(res);
-            return resData.data[0] ?? {};
+            return resData.data.length > 0 ? resData.data[0] : null;
         }
     });
 }

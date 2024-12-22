@@ -34,12 +34,12 @@ const Hero = async () => {
                <div className=" -z-40 fixed left-[50%] top-[50%] h-[200px] w-[800px] translate-x-[-50%] translate-y-[-50%] rounded-[100%] bg-[#6517be] blur-[90px]"></div>
 
                <h1 className="relative text-3xl font-bold text-purple-300 md:text-5xl">
-                  <FlipWords
+                  {/* <FlipWords
                      words={flip}
                      className=" text-purple-300"
                      duration={1000}
-                  />{' '}
-                  Developer
+                  />{' '} */}
+                  <span className=' text-white'>Backend</span> Developer
                </h1>
                <p className="relative leading-relaxed text-gray-300">
                   Im Muhammad Arya Dzaky Arenanto
@@ -55,7 +55,7 @@ const Hero = async () => {
                   Download CV
                </Link>
                <div className="flex justify-center gap-4 mt-8 relative">
-                  <img src="/icons/figma.svg" alt="Figma" className="w-8 h-8" />
+                  {/* <img src="/icons/figma.svg" alt="Figma" className="w-8 h-8" />
                   <img src="/icons/react.svg" alt="React" className="w-8 h-8" />
                   <img
                      src="/icons/nodejs.svg"
@@ -81,7 +81,7 @@ const Hero = async () => {
                      src="/icons/nextjs.svg"
                      alt="Next.js"
                      className="w-8 h-8"
-                  />
+                  /> */}
                </div>
             </div>
          </div>
