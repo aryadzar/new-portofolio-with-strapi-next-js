@@ -1,5 +1,8 @@
+'use client'
+
 import { Portofolio } from '@/model/portofolio';
 import { media } from '@/utils/media';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 

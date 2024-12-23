@@ -9,6 +9,7 @@ export const metadata: Metadata = {
       images: 'favicon.ico',
    }
 }
+export const revalidate = 0; 
 
 const Home: React.FC = async () => {
    const { data } = await getPortofolio();
