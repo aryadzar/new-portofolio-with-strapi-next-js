@@ -367,7 +367,7 @@ const BlogPage: React.FC = () => {
    const [loading, setLoading] = useState<boolean>(true);
    const [totalPages, setTotalPages] = useState(1);
 
-   const blogsPerPage = 1;
+   const blogsPerPage = 5;
 
    // Ambil query parameter dari URL
    const currentPage = parseInt(searchParams.get('page') || '1');
