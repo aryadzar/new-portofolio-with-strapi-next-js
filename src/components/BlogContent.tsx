@@ -1,16 +1,14 @@
-import { Post } from "@/model/post";
-import { media } from "@/utils/media";
-import ReactMarkdown from 'react-markdown'
+import { Post } from '@/model/post';
+import { media } from '@/utils/media';
+import ReactMarkdown from 'react-markdown';
 import remarkYoutube from 'remark-youtube';
 import remarkGfm from 'remark-gfm';
 
 interface BlogContentProps {
-   post : Post
+   post: Post;
 }
 
-const BlogContent: React.FC<BlogContentProps> = ({
-   post
-}) => {
+const BlogContent: React.FC<BlogContentProps> = ({ post }) => {
    return (
       <article className="text-white leading-relaxed">
          <img
@@ -18,19 +16,21 @@ const BlogContent: React.FC<BlogContentProps> = ({
             alt={post.title}
             className="w-full rounded-lg mb-6 shadow-lg"
          />
-         <ReactMarkdown 
+         <ReactMarkdown
             remarkPlugins={[remarkYoutube, remarkGfm]}
-            
             components={{
                a: ({ href, children }) => (
-                  <a href={href || " "} className="text-blue-600 hover:underline">
+                  <a
+                     href={href || ' '}
+                     className="text-blue-600 hover:underline"
+                  >
                      {children}
                   </a>
                ),
                img: ({ src, alt }) => (
                   <img
-                     src={src || ""}
-                     alt={alt || ""}
+                     src={src || ''}
+                     alt={alt || ''}
                      className="block mx-auto mt-5 my-6 max-w-full rounded-lg shadow-md"
                      style={{ height: 'auto' }}
                   />
@@ -51,14 +51,11 @@ const BlogContent: React.FC<BlogContentProps> = ({
                   <p className="mb-6 text-gray-200">{children}</p>
                ),
             }}
-         
-         
-         
          >
             {post.content}
          </ReactMarkdown>
       </article>
    );
 };
- 
- export default BlogContent;
+
+export default BlogContent;

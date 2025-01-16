@@ -3,11 +3,11 @@ import Link from 'next/link';
 import { format } from 'date-fns';
 
 interface BlogHeaderProps {
-   post : Post
+   post: Post;
 }
 
 const BlogHeader: React.FC<BlogHeaderProps> = ({ post }) => {
-   const formattedDate = format(new Date(post.createdAt), "EEEE, MMMM d, yyyy");
+   const formattedDate = format(new Date(post.createdAt), 'EEEE, MMMM d, yyyy');
 
    return (
       <header className="mb-8">

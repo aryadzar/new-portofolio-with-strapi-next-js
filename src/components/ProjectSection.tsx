@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { Portofolio } from '@/model/portofolio';
 import { media } from '@/utils/media';

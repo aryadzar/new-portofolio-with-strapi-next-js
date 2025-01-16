@@ -3,13 +3,13 @@ import { getPortofolio } from '@/services/portofolio.service';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-   title : 'Daftar Project ',
-   description : "Daftar Project yang dikerjakan",
+   title: 'Daftar Project ',
+   description: 'Daftar Project yang dikerjakan',
    openGraph: {
       images: 'favicon.ico',
-   }
-}
-export const revalidate = 0; 
+   },
+};
+export const revalidate = 0;
 
 const Home: React.FC = async () => {
    const { data } = await getPortofolio();

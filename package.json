@@ -30,7 +30,8 @@
       "tailwind-merge": "^2.5.5",
       "tailwindcss-animate": "^1.0.7",
       "three": "^0.171.0",
-      "three-globe": "^2.35.2"
+      "three-globe": "^2.35.2",
+      "use-debounce": "^10.0.4"
    },
    "devDependencies": {
       "@types/node": "^20",

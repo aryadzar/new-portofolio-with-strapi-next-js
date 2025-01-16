@@ -39,7 +39,7 @@ const Hero = async () => {
                      className=" text-purple-300"
                      duration={1000}
                   />{' '} */}
-                  <span className=' text-white'>Backend</span> Developer
+                  <span className=" text-white">Backend</span> Developer
                </h1>
                <p className="relative leading-relaxed text-gray-300">
                   Im Muhammad Arya Dzaky Arenanto
