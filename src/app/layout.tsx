@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 import StarBackground from '@/components/StarsBackground';
 import { AppProgressBar as ProgressBar } from 'next-nprogress-bar';
 import { SparklesCore } from '@/components/ui/sparkles';
-
+import { GoogleTagManager } from '@next/third-parties/google'
 const geistSans = localFont({
    src: './fonts/GeistVF.woff',
    variable: '--font-geist-sans',
@@ -27,7 +27,8 @@ export default function RootLayout({
 }>) {
    return (
       <html lang="en">
-         <body
+      <GoogleTagManager gtmId="G-G0CJPYCKWQ" />
+      <body
             className={`${geistSans.variable} ${geistMono.variable} antialiased`}
          >
             <Navbar />
@@ -41,17 +42,17 @@ export default function RootLayout({
                   className="w-full h-full"
                   particleColor="#FFFFFF"
                />
-            </div>
-
-            {children}
-            <ProgressBar
+                           <ProgressBar
                height="2px"
                color="#FFFFFF"
                options={{ showSpinner: false }}
                shallowRouting
             />
+            </div>
+            {children}
             <Footer />
          </body>
+         
       </html>
    );
 }

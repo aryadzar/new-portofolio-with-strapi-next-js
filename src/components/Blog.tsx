@@ -357,7 +357,7 @@ import Link from 'next/link';
 import { getPosts } from '@/services/post.service';
 import { media } from '@/utils/media';
 import { Post } from '@/model/post';
-
+// import 'nprogress/nprogress.css'; // Pastikan gaya NProgress dimuat
 const BlogPage: React.FC = () => {
    const searchParams = useSearchParams();
    const router = useRouter();
@@ -367,7 +367,7 @@ const BlogPage: React.FC = () => {
    const [loading, setLoading] = useState<boolean>(true);
    const [totalPages, setTotalPages] = useState(1);
 
-   const blogsPerPage = 5;
+   const blogsPerPage = 6;
 
    // Ambil query parameter dari URL
    const currentPage = parseInt(searchParams.get('page') || '1');

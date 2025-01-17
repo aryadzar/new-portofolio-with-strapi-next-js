@@ -1,5 +1,7 @@
 import type { Config } from 'tailwindcss';
 import tailwindcssAnimate from 'tailwindcss-animated';
+import typography from '@tailwindcss/typography'; // Import plugin typography
+
 const {
    default: flattenColorPalette,
 } = require('tailwindcss/lib/util/flattenColorPalette');
@@ -18,7 +20,11 @@ export default {
          },
       },
    },
-   plugins: [tailwindcssAnimate, addVariablesForColors],
+   plugins: [
+         tailwindcssAnimate ,
+         typography, 
+         addVariablesForColors
+   ],
 } satisfies Config;
 
 function addVariablesForColors({ addBase, theme }: any) {

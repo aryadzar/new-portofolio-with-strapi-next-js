@@ -8,6 +8,7 @@ export const getPosts = async (page: number, pageSize: number, search: string = 
          'pagination[page]': page,
          'pagination[pageSize]': pageSize,
          'filters[title][$containsi]': search, // Filter by title containing the search term
+         'sort[0]' : 'createdAt:desc'
       },
       transformResponse: (res) => {
          const resData = JSON.parse(res);
