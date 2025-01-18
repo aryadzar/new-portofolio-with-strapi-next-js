@@ -29,6 +29,8 @@ export async function generateMetadata(): Promise<Metadata> {
    };
 }
 
+export const revalidate = 0;
+
 const About = () => {
    return (
       <>
