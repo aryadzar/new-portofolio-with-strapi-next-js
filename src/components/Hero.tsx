@@ -111,11 +111,11 @@ const Hero = () => {
         setAboutData(data);
       } catch (err) {
         setError('Failed to fetch data');
+        console.error(err)
       } finally {
         setLoading(false);
       }
     };
-
     fetchAboutData();
   }, []);
 

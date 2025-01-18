@@ -4,10 +4,13 @@ import { Experience } from '@/model/experience';
 import { api } from '@/utils/api';
 
 export const getAbout = async () => {
-   return await api.get<About>('/api/about-me', {
+   return await api.get<About>('/about-me', {
       params: {
          populate: '*',
       },
+      // headers: {
+      //    'Content-Type' : "application/json"
+      // },
       transformResponse: (res) => {
          const resData = JSON.parse(res);
          return resData ?? {};
@@ -15,7 +18,7 @@ export const getAbout = async () => {
    });
 };
 export const getEducation = async () => {
-   return await api.get<Education[]>('/api/educations', {
+   return await api.get<Education[]>('/educations', {
       params: {
          populate: '*',
       },
@@ -26,7 +29,7 @@ export const getEducation = async () => {
    });
 };
 export const getExperience = async () => {
-   return await api.get<Experience[]>('/api/experiences', {
+   return await api.get<Experience[]>('/experiences', {
       params: {
          populate: '*',
       },

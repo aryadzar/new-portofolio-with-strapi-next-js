@@ -9,6 +9,8 @@ import StarBackground from '@/components/StarsBackground';
 import { AppProgressBar as ProgressBar } from 'next-nprogress-bar';
 import { SparklesCore } from '@/components/ui/sparkles';
 import { GoogleTagManager } from '@next/third-parties/google'
+import { Toaster } from 'react-hot-toast';
+
 const geistSans = localFont({
    src: './fonts/GeistVF.woff',
    variable: '--font-geist-sans',
@@ -30,7 +32,16 @@ export default function RootLayout({
       <GoogleTagManager gtmId="G-G0CJPYCKWQ" />
       <body
             className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-         >
+         >            
+            <Toaster position="top-right" toastOptions={{
+               style: {
+                  background: 'linear-gradient(to right, #6429B6, #2C1250)',
+                  color: '#ffffff',
+                  padding: '10px',
+                  borderRadius: '8px',
+               },
+            }}
+            reverseOrder={false} />
             <Navbar />
             <div className="w-full fixed -z-40   h-screen">
                <SparklesCore

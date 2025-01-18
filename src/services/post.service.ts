@@ -2,7 +2,7 @@ import { Post } from '@/model/post';
 import { api } from '@/utils/api';
 
 export const getPosts = async (page: number, pageSize: number, search: string = '') => {
-   const response = await api.get('/api/posts', {
+   const response = await api.get('/posts', {
       params: {
          populate: '*', // Populate all relations
          'pagination[page]': page,
@@ -24,7 +24,7 @@ export const getPosts = async (page: number, pageSize: number, search: string = 
 
 // get post by slug
 export const getPost = async (slug: string) => {
-   return await api.get<Post>('/api/posts', {
+   return await api.get<Post>('/posts', {
       params: {
          populate: '*',
          'filters[slug][$eq]': slug,
