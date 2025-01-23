@@ -54,35 +54,35 @@
 //                >
 //                   Download CV
 //                </Link>
-//                <div className="flex justify-center gap-4 mt-8 relative">
-//                   {/* <img src="/icons/figma.svg" alt="Figma" className="w-8 h-8" />
-//                   <img src="/icons/react.svg" alt="React" className="w-8 h-8" />
-//                   <img
-//                      src="/icons/nodejs.svg"
-//                      alt="Node.js"
-//                      className="w-8 h-8"
-//                   />
-//                   <img
-//                      src="/icons/javascript.svg"
-//                      alt="JavaScript"
-//                      className="w-8 h-8"
-//                   />
-//                   <img
-//                      src="/icons/nextjs.svg"
-//                      alt="Next.js"
-//                      className="w-8 h-8"
-//                   />
-//                   <img
-//                      src="/icons/nextjs.svg"
-//                      alt="Next.js"
-//                      className="w-8 h-8"
-//                   />
-//                   <img
-//                      src="/icons/nextjs.svg"
-//                      alt="Next.js"
-//                      className="w-8 h-8"
-//                   /> */}
-//                </div>
+              //  <div className="flex justify-center gap-4 mt-8 relative">
+              //     <img src="/icons/figma.svg" alt="Figma" className="w-8 h-8" />
+              //     <img src="/icons/react.svg" alt="React" className="w-8 h-8" />
+              //     <img
+              //        src="/icons/nodejs.svg"
+              //        alt="Node.js"
+              //        className="w-8 h-8"
+              //     />
+              //     <img
+              //        src="/icons/javascript.svg"
+              //        alt="JavaScript"
+              //        className="w-8 h-8"
+              //     />
+              //     <img
+              //        src="/icons/nextjs.svg"
+              //        alt="Next.js"
+              //        className="w-8 h-8"
+              //     />
+              //     <img
+              //        src="/icons/nextjs.svg"
+              //        alt="Next.js"
+              //        className="w-8 h-8"
+              //     />
+              //     <img
+              //        src="/icons/nextjs.svg"
+              //        alt="Next.js"
+              //        className="w-8 h-8"
+              //     />
+              //  </div>
 //             </div>
 //          </div>
 //       </div>
@@ -164,11 +164,11 @@ const Hero = () => {
         <div className="relative flex justify-center md:px-20">
           <div className="circlePosition z-1 absolute left-[50%] top-[50%] h-[200px] w-[100px] translate-x-[-50%] translate-y-[-50%] rounded-[200%] bg-[#6517be] blur-[90px]"></div>
 
-          <Image
+          <img
             src={media(aboutData.data.foto_profile.url)}
             alt="Profile"
-            width={300}
-            height={300}
+            // width={300}
+            // height={300}
             className="relative h-48 w-48 md:h-64 md:w-64"
           />
         </div>
@@ -193,6 +193,34 @@ const Hero = () => {
           >
             Download CV
           </Link>
+          <div className="flex justify-center gap-4 mt-8 relative">
+                  <img src="/icons/nodejs.svg" alt="React" className="w-8 h-8" />
+                  <img
+                     src="/icons/react.svg"
+                     alt="Node.js"
+                     className="w-8 h-8"
+                  />
+                  <img
+                     src="/icons/js.svg"
+                     alt="JavaScript"
+                     className="w-8 h-8"
+                  />
+                  <img
+                     src="/icons/c.svg"
+                     alt="Next.js"
+                     className="w-8 h-8"
+                  />
+                  <img
+                     src="/icons/nextjs.svg"
+                     alt="Next.js"
+                     className="w-8 h-8"
+                  />
+                  <img
+                     src="/icons/pgsql.svg"
+                     alt="Next.js"
+                     className="w-8 h-8"
+                  />
+               </div>
         </div>
       </div>
     </div>

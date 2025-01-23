@@ -473,7 +473,7 @@ const BlogPage: React.FC = () => {
                      />
                      <div className="p-4 flex-1 flex flex-col justify-between">
                         <div>
-                           <p className="text-sm text-gray-300">
+                           <p className="text-xs mb-2 text-gray-300">
                               {blog.post_categories.map((category) => category.category_name).join(', ')}
                            </p>
                            <h2 className="text-xl font-bold">{blog.title}</h2>

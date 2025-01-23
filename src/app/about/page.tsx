@@ -34,10 +34,6 @@ export const revalidate = 0;
 const About = () => {
    return (
       <>
-         <Head>
-            <title>Tentang Saya</title>
-            <meta name="description" content="Tentang Arya Dzaky" />
-         </Head>
          <div className=" text-white">
             <AboutCom />
          </div>
