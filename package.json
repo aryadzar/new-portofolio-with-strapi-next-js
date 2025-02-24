@@ -13,6 +13,7 @@
       "@next/third-parties": "^15.1.4",
       "@react-three/drei": "^9.119.0",
       "@react-three/fiber": "^8.17.10",
+      "@sentry/nextjs": "^9.1.0",
       "@tsparticles/engine": "^3.7.1",
       "@tsparticles/react": "^3.0.0",
       "@tsparticles/slim": "^3.7.1",
