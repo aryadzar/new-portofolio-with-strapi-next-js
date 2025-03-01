@@ -30,7 +30,6 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export const revalidate = 0;
 
-
 export default function Home() {
    return (
       <>

@@ -18,16 +18,12 @@ export default {
             background: 'var(--background)',
             foreground: 'var(--foreground)',
          },
-         fontFamily:{
-            preahvihear: ['Preahvihear', 'sans-serif']
-         }
+         fontFamily: {
+            preahvihear: ['Preahvihear', 'sans-serif'],
+         },
       },
    },
-   plugins: [
-         tailwindcssAnimate ,
-         typography, 
-         addVariablesForColors
-   ],
+   plugins: [tailwindcssAnimate, typography, addVariablesForColors],
 } satisfies Config;
 
 function addVariablesForColors({ addBase, theme }: any) {

@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 import StarBackground from '@/components/StarsBackground';
 import { AppProgressBar as ProgressBar } from 'next-nprogress-bar';
 import { SparklesCore } from '@/components/ui/sparkles';
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google';
 import { Toaster } from 'react-hot-toast';
 
 // const geistSans = localFont({
@@ -29,19 +29,20 @@ export default function RootLayout({
 }>) {
    return (
       <html lang="en">
-      <GoogleTagManager gtmId="G-G0CJPYCKWQ" />
-      <body
-            className={` antialiased`}
-         >            
-            <Toaster position="top-right" toastOptions={{
-               style: {
-                  background: 'linear-gradient(to right, #6429B6, #2C1250)',
-                  color: '#ffffff',
-                  padding: '10px',
-                  borderRadius: '8px',
-               },
-            }}
-            reverseOrder={false} />
+         <GoogleTagManager gtmId="G-G0CJPYCKWQ" />
+         <body className={` antialiased`}>
+            <Toaster
+               position="top-right"
+               toastOptions={{
+                  style: {
+                     background: 'linear-gradient(to right, #6429B6, #2C1250)',
+                     color: '#ffffff',
+                     padding: '10px',
+                     borderRadius: '8px',
+                  },
+               }}
+               reverseOrder={false}
+            />
             <Navbar />
             <div className="w-full fixed -z-40   h-screen">
                <SparklesCore
@@ -53,17 +54,16 @@ export default function RootLayout({
                   className="w-full h-full"
                   particleColor="#FFFFFF"
                />
-                           <ProgressBar
-               height="2px"
-               color="#FFFFFF"
-               options={{ showSpinner: false }}
-               shallowRouting
-            />
+               <ProgressBar
+                  height="2px"
+                  color="#FFFFFF"
+                  options={{ showSpinner: false }}
+                  shallowRouting
+               />
             </div>
             {children}
             <Footer />
          </body>
-         
       </html>
    );
 }

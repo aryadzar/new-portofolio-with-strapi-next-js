@@ -4,12 +4,11 @@ const api = axios.create({
    baseURL: process.env.NEXT_PUBLIC_API_URL,
 });
 
-
-
 api.interceptors.request.use(
    function (config) {
       // Do something before request is sent
-      config.headers['Authorization'] = `Bearer ${process.env.NEXT_PUBLIC_API_STRAPI_TOKEN}`
+      config.headers['Authorization'] =
+         `Bearer ${process.env.NEXT_PUBLIC_API_STRAPI_TOKEN}`;
       return config;
    },
    function (error) {

@@ -1,14 +1,18 @@
 import { Post } from '@/model/post';
 import { api } from '@/utils/api';
 
-export const getPosts = async (page: number, pageSize: number, search: string = '') => {
+export const getPosts = async (
+   page: number,
+   pageSize: number,
+   search: string = ''
+) => {
    const response = await api.get('/posts', {
       params: {
          populate: '*', // Populate all relations
          'pagination[page]': page,
          'pagination[pageSize]': pageSize,
          'filters[title][$containsi]': search, // Filter by title containing the search term
-         'sort[0]' : 'createdAt:desc'
+         'sort[0]': 'createdAt:desc',
       },
       transformResponse: (res) => {
          const resData = JSON.parse(res);

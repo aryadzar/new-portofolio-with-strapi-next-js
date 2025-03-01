@@ -1,5 +1,4 @@
-
-'use client'
+'use client';
 
 import React, { useState } from 'react';
 import axios from 'axios';
@@ -17,9 +16,10 @@ const ContactMe = () => {
 
    const [loading, setLoading] = useState(false);
 
-
    // Handler untuk mengubah state input
-   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+   const handleChange = (
+      e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+   ) => {
       const { name, value } = e.target;
       setFormData((prev) => ({
          ...prev,
@@ -31,7 +31,7 @@ const ContactMe = () => {
    const handleSubmit = async (e: React.FormEvent) => {
       e.preventDefault();
       setLoading(true);
-   
+
       try {
          // Siapkan payload dengan format API
          const payload = {
@@ -42,10 +42,10 @@ const ContactMe = () => {
                message: formData.message,
             },
          };
-   
+
          // Kirim data ke API
          await api.post('/contacts', payload);
-   
+
          // Tampilkan notifikasi sukses
          toast.success('Pesan berhasil dikirim!');
          setFormData({
@@ -56,9 +56,7 @@ const ContactMe = () => {
          });
       } catch (error) {
          // Tampilkan notifikasi error
-         toast.error(
-            'Terjadi kesalahan saat mengirim pesan. Coba lagi nanti.'
-         );
+         toast.error('Terjadi kesalahan saat mengirim pesan. Coba lagi nanti.');
       } finally {
          setLoading(false);
       }
@@ -81,7 +79,10 @@ const ContactMe = () => {
             </div>
 
             {/* Contact Form */}
-            <form onSubmit={handleSubmit} className="bg-opacity-30 rounded-lg shadow-lg space-y-4">
+            <form
+               onSubmit={handleSubmit}
+               className="bg-opacity-30 rounded-lg shadow-lg space-y-4"
+            >
                <input
                   type="text"
                   name="name"
@@ -137,4 +138,3 @@ const ContactMe = () => {
 };
 
 export default ContactMe;
-

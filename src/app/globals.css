@@ -4,7 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
    @apply bg-[#11071F] font-preahvihear;
    cursor: url('/cursor.gif'), auto;

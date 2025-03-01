@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import NotFoundPage from "@/components/ErrorPage";
-import Link from "next/link";
+import NotFoundPage from '@/components/ErrorPage';
+import Link from 'next/link';
 
 const NotFound = () => {
-    return (
+   return (
       <>
-        <NotFoundPage status={404}/>
+         <NotFoundPage status={404} />
       </>
-    );
+   );
 };
 
 export default NotFound;

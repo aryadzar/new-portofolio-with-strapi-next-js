@@ -1,10 +1,14 @@
-import { getAbout, getEducation, getExperience } from '@/services/about.service';
+import {
+   getAbout,
+   getEducation,
+   getExperience,
+} from '@/services/about.service';
 
 const AboutCom = async () => {
    const { data } = await getAbout();
 
-   const {data: experienceData}  = await getExperience();
-   const {data: educationData}  = await getEducation();
+   const { data: experienceData } = await getExperience();
+   const { data: educationData } = await getEducation();
    return (
       <div className="container px-10 lg:mx-auto my-20">
          <p className=" text-justify">{data.data.isi_tentang_saya}</p>
@@ -28,7 +32,6 @@ const AboutCom = async () => {
                         <p className="mt-2 text-center md:text-left">
                            {item.description}
                         </p>
-
                      </div>
                   ))}
                </div>
@@ -52,7 +55,6 @@ const AboutCom = async () => {
                         <p className="mt-2 text-center md:text-left">
                            {item.description}
                         </p>
-
                      </div>
                   ))}
                </div>

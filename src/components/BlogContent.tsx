@@ -18,7 +18,7 @@ interface BlogContentProps {
 //          />
 //          <ReactMarkdown
 //             remarkPlugins={[remarkYoutube, remarkGfm]}
-//             className='prose lg:prose-xl prose-p:text-justify  
+//             className='prose lg:prose-xl prose-p:text-justify
 //             prose-h1:text-white prose-h2:text-white prose-h3:text-white prose-h4:text-white !text-white justify-center'
 //             components={{
 //                a: ({ href, children }) => (
